@@ -53,17 +53,20 @@ public class Interface extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButtonSlv = new javax.swing.JButton();
-        jButtonInc = new javax.swing.JButton();
-        jButtonSlv2 = new javax.swing.JButton();
-        jButtonInc2 = new javax.swing.JButton();
-        jButtonSlv3 = new javax.swing.JButton();
-        jButtonInc3 = new javax.swing.JButton();
         jToggleButtonC = new javax.swing.JToggleButton();
         jToggleButtonR = new javax.swing.JToggleButton();
         jToggleButtonL = new javax.swing.JToggleButton();
         jToggleButtonP = new javax.swing.JToggleButton();
         jButton2 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -221,52 +224,10 @@ public class Interface extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-
-        jButtonSlv.setText("Salveaza");
-        jButtonSlv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSlvActionPerformed(evt);
-            }
-        });
-
-        jButtonInc.setText("Incarca");
-        jButtonInc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonIncActionPerformed(evt);
-            }
-        });
-
-        jButtonSlv2.setText("Salveaza");
-        jButtonSlv2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSlv2ActionPerformed(evt);
-            }
-        });
-
-        jButtonInc2.setText("Incarca");
-        jButtonInc2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonInc2ActionPerformed(evt);
-            }
-        });
-
-        jButtonSlv3.setText("Salveaza");
-        jButtonSlv3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSlv3ActionPerformed(evt);
-            }
-        });
-
-        jButtonInc3.setText("Incarca");
-        jButtonInc3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonInc3ActionPerformed(evt);
-            }
-        });
 
         buttonGroup2.add(jToggleButtonC);
         jToggleButtonC.setText("Cerc");
@@ -307,34 +268,78 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setText("Save");
+
+        jMenuItem1.setText("Save as plain text with lots of lines");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Save as plain text with less lines");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("Save as bytes");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Load");
+
+        jMenuItem4.setText("Load from plain text with lots of lines");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
+        jMenuItem5.setText("Load from plain text with less lines");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
+        jMenuItem6.setText("Load from bytes");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem6);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonSlv)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonInc)
-                        .addGap(41, 41, 41)
-                        .addComponent(jButtonSlv2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonInc2)
-                        .addGap(50, 50, 50)
-                        .addComponent(jButtonSlv3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonInc3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jToggleButtonP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButtonC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButtonR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButtonL, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 922, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jToggleButtonP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButtonC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButtonR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButtonL, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 922, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -347,18 +352,9 @@ public class Interface extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButtonSlv3)
-                                .addComponent(jButtonInc3))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButtonSlv)
-                                .addComponent(jButtonInc)
-                                .addComponent(jButtonSlv2)
-                                .addComponent(jButtonInc2)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jToggleButtonC)
                                 .addGap(18, 18, 18)
@@ -380,33 +376,33 @@ public class Interface extends javax.swing.JFrame {
         int xv = evt.getX();
         int yv = evt.getY();
         if (figuraSelectata != null) {
-            figuraSelectata.stergeMarcaj();
+            figuraSelectata.deleteMarking();
             figuraSelectata = null;
         }
         if (figura != null) {
-            boolean continua = figura.adauga(xv, yv);
-            figura.afiseaza();
+            boolean continua = figura.add(xv, yv);
+            figura.show();
             if (!continua) {
-                figura.incheie();
+                figura.close();
                 figuri.add(figura);
                 buttonGroup2.clearSelection();
                 figura = null;
             }
         } else if (jToggleButtonC.isSelected()) {
             figura = new Circle(xv, yv, 50, clr, jCheckBox1.isSelected());
-            figura.afiseaza();
+            figura.show();
         } else if (jToggleButtonR.isSelected()) {
             figura = new Rectangle(xv, yv, 100, 50, clr, jCheckBox1.isSelected());
-            figura.afiseaza();
+            figura.show();
         } else if (jToggleButtonL.isSelected()) {
             figura = new Line(xv, yv, clr, false);
-            figura.afiseaza();
+            figura.show();
         } else if (jToggleButtonP.isSelected()) {
             figura = new Polygon(xv, yv, clr, false);
-            figura.afiseaza();
+            figura.show();
         } else {
             for (Figure f : figuri) {
-                if (f.aproape(xv, yv)) {
+                if (f.close(xv, yv)) {
                     figuraSelectata = f;
                     jCheckBox1.setSelected(figuraSelectata.filled);
                 }
@@ -421,9 +417,9 @@ public class Interface extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         clr = JColorChooser.showDialog(this, "Culoare 1", Color.BLACK);
         if (figuraSelectata != null) {
-            figuraSelectata.stergeMarcaj();
+            figuraSelectata.deleteMarking();
             figuraSelectata.c = clr;
-            figuraSelectata.afiseazaMarcaj();
+            figuraSelectata.showMarking();
 
 //            jButton2.setBorderPainted(false);
 //            jButton2.setOpaque(true);
@@ -435,7 +431,7 @@ public class Interface extends javax.swing.JFrame {
 
     void redeseneaza() {
         for (Figure f : figuri) {
-            f.afiseaza();
+            f.show();
         }
     }
 
@@ -444,20 +440,20 @@ public class Interface extends javax.swing.JFrame {
         int ym = evt.getY();
         if (figura != null) {
             if (jToggleButtonL.isSelected()) {
-                figura.adauga(xm, ym);
-                figura.afiseaza();
+                figura.add(xm, ym);
+                figura.show();
             } else {
-                figura.redimensioneaza(xm, ym);
+                figura.resize(xm, ym);
             }
         } else if (figuraSelectata != null) {
             if (jRadioButton1.isSelected()) {
-                figuraSelectata.stergeMarcaj();
-                figuraSelectata.muta(xm, ym);
-                figuraSelectata.afiseazaMarcaj();
+                figuraSelectata.deleteMarking();
+                figuraSelectata.move(xm, ym);
+                figuraSelectata.showMarking();
             } else {
-                figuraSelectata.stergeMarcaj();
-                figuraSelectata.redimensioneaza(xm, ym);
-                figuraSelectata.afiseazaMarcaj();
+                figuraSelectata.deleteMarking();
+                figuraSelectata.resize(xm, ym);
+                figuraSelectata.showMarking();
             }
         }
         redeseneaza();
@@ -468,11 +464,11 @@ public class Interface extends javax.swing.JFrame {
         int ym = evt.getY();
         
         for (Figure f : figuri) {
-            if (f.aproape(xm, ym)) {
-                f.afiseazaMarcaj();
+            if (f.close(xm, ym)) {
+                f.showMarking();
             } else {
                 if (figuraSelectata != f) {
-                    f.stergeMarcaj();
+                    f.deleteMarking();
                 }
             }
         }
@@ -487,7 +483,7 @@ public class Interface extends javax.swing.JFrame {
     private void jPanel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseReleased
         if (!jToggleButtonP.isSelected()) {
             if (figura != null) {
-                figura.incheie();
+                figura.close();
                 figuri.add(figura);
                 figura = null;
                 buttonGroup2.clearSelection();
@@ -498,8 +494,8 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButtonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSActionPerformed
         if (figuraSelectata != null) {
-            figuraSelectata.stergeMarcaj();
-            figuraSelectata.sterge();
+            figuraSelectata.deleteMarking();
+            figuraSelectata.delete();
             figuri.remove(figuraSelectata);
             figuraSelectata = null;
             redeseneaza();
@@ -519,24 +515,99 @@ public class Interface extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jToggleButtonLActionPerformed
 
-    private void jButtonSlvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSlvActionPerformed
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        if (figuraSelectata != null) {
+            figuraSelectata.delete();
+            figuraSelectata.filled = jCheckBox1.isSelected();
+            figuraSelectata.show();
+            figuraSelectata.showMarking();
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jToggleButtonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButtonPActionPerformed
+
+    private void jTable1Selection() {
+        if (figuraSelectata != null) {
+            figuraSelectata.deleteMarking();
+        }
+        figuraSelectata = figuri.get(jTable1.getSelectedRow());
+        figuraSelectata.showMarking();
+    }
+
+
+    private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
+        jTable1Selection();
+    }//GEN-LAST:event_jTable1MousePressed
+
+    private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
+        jTable1Selection();
+    }//GEN-LAST:event_jTable1KeyPressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        for (Figure f : figuri) {
+            Thr thread = new Thr(f);
+            thread.start();
+            threads.add(thread);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        for(Thread thread : threads){
+//            thread.interrupt();
+            thread.stop();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         try {
-            PrintStream ps = new PrintStream(new FileOutputStream("desen.txt"));
+            PrintStream ps = new PrintStream(new FileOutputStream("desen2.txt"));
             for (Figure f : figuri) {
-                f.salveaza(ps);
+                f.save2(ps);
             }
             ps.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButtonSlvActionPerformed
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jButtonIncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIncActionPerformed
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        try {
+            DataOutputStream dos = new DataOutputStream(new FileOutputStream("desen3.txt"));
+            for (Figure f : figuri) {
+                f.save2(dos);
+            }
+            dos.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        try {
+            PrintStream ps = new PrintStream(new FileOutputStream("desen.txt"));
+            for (Figure f : figuri) {
+                f.save(ps);
+            }
+            ps.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         try {
             DataInputStream dis = new DataInputStream(new FileInputStream("desen.txt"));
             for (Figure f : figuri) {
-                f.stergeMarcaj();
-                f.sterge();
+                f.deleteMarking();
+                f.delete();
             }
             figuri.clear();
             int cod;
@@ -565,25 +636,13 @@ public class Interface extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButtonIncActionPerformed
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jButtonSlv2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSlv2ActionPerformed
-        try {
-            PrintStream ps = new PrintStream(new FileOutputStream("desen2.txt"));
-            for (Figure f : figuri) {
-                f.salveaza2(ps);
-            }
-            ps.close();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButtonSlv2ActionPerformed
-
-    private void jButtonInc2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInc2ActionPerformed
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         try {
             DataInputStream dis = new DataInputStream(new FileInputStream("desen2.txt"));
             for (Figure f : figuri) {
-                f.sterge();
+                f.delete();
             }
             figuri.clear();
             int cod;
@@ -620,27 +679,13 @@ public class Interface extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButtonInc2ActionPerformed
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jButtonSlv3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSlv3ActionPerformed
-        try {
-            DataOutputStream dos = new DataOutputStream(new FileOutputStream("desen3.txt"));
-            for (Figure f : figuri) {
-                f.salveaza2(dos);
-            }
-            dos.close();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButtonSlv3ActionPerformed
-
-    private void jButtonInc3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInc3ActionPerformed
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         try {
             DataInputStream dis = new DataInputStream(new FileInputStream("desen3.txt"));
             for (Figure f : figuri) {
-                f.sterge();
+                f.delete();
             }
             figuri.clear();
             int cod;
@@ -669,56 +714,7 @@ public class Interface extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButtonInc3ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        if (figuraSelectata != null) {
-            figuraSelectata.sterge();
-            figuraSelectata.filled = jCheckBox1.isSelected();
-            figuraSelectata.afiseaza();
-            figuraSelectata.afiseazaMarcaj();
-        }
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jToggleButtonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButtonPActionPerformed
-
-    private void jTable1Selection() {
-        if (figuraSelectata != null) {
-            figuraSelectata.stergeMarcaj();
-        }
-        figuraSelectata = figuri.get(jTable1.getSelectedRow());
-        figuraSelectata.afiseazaMarcaj();
-    }
-
-
-    private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
-        jTable1Selection();
-    }//GEN-LAST:event_jTable1MousePressed
-
-    private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
-        jTable1Selection();
-    }//GEN-LAST:event_jTable1KeyPressed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        for (Figure f : figuri) {
-            Thr thread = new Thr(f);
-            thread.start();
-            threads.add(thread);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        for(Thread thread : threads){
-//            thread.interrupt();
-            thread.stop();
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -772,16 +768,19 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButtonInc;
-    private javax.swing.JButton jButtonInc2;
-    private javax.swing.JButton jButtonInc3;
     private javax.swing.JButton jButtonS;
-    private javax.swing.JButton jButtonSlv;
-    private javax.swing.JButton jButtonSlv2;
-    private javax.swing.JButton jButtonSlv3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JColorChooser jColorChooser2;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;

@@ -16,7 +16,7 @@ public class Polygon extends Line {
     }
 
     @Override
-    public boolean adauga(int xm, int ym) {
+    public boolean add(int xm, int ym) {
         int xv, yv;
         Point pv = puncte.get(0);
         xv = pv.x + x;

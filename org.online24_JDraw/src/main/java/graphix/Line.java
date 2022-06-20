@@ -16,7 +16,7 @@ public class Line extends Figure {
     int dxM, dxm;
     int dyM, dym;
 
-    void calculeazaLimite() {
+    void computeLimits() {
         dxm = 0;
         dym = 0;
         dxM = 0;
@@ -61,7 +61,7 @@ public class Line extends Figure {
             puncte.add(new Point(Integer.parseInt(dis.readLine()),
                     Integer.parseInt(dis.readLine())));
         }
-        calculeazaLimite();
+        computeLimits();
     }
 
     Line(ArrayList<Integer> numere) throws IOException {
@@ -72,7 +72,7 @@ public class Line extends Figure {
                 i++) {
             puncte.add(new Point(numere.remove(0), numere.remove(0)));
         }
-        calculeazaLimite();
+        computeLimits();
     }
 
     Line(DataInputStream dis, boolean citeste) throws IOException {
@@ -83,16 +83,16 @@ public class Line extends Figure {
             puncte.add(new Point(dis.readShort(),
                     dis.readShort()));
         }
-        calculeazaLimite();
+        computeLimits();
     }
 
-    public void salveaza(PrintStream ps) {
+    public void save(PrintStream ps) {
         if (this instanceof Polygon) {
             ps.println(3);
         } else {
             ps.println(2);
         }
-        super.salveaza(ps);
+        super.save(ps);
         ps.println(puncte.size());
         for (Point p : puncte) {
             ps.println(p.x);
@@ -100,13 +100,13 @@ public class Line extends Figure {
         }
     }
 
-    public void salveaza2(PrintStream ps) {
+    public void save2(PrintStream ps) {
         if (this instanceof Polygon) {
             ps.print(3 + ", ");
         } else {
             ps.print(2 + ", ");
         }
-        super.salveaza2(ps);
+        super.save2(ps);
         ps.print(puncte.size() + ", ");
         for (Point p : puncte) {
             ps.print(p.x + ", ");
@@ -115,13 +115,13 @@ public class Line extends Figure {
         ps.println("");
     }
 
-    public void salveaza2(DataOutputStream dos) throws IOException {
+    public void save2(DataOutputStream dos) throws IOException {
         if (this instanceof Polygon) {
             dos.writeByte(3);
         } else {
             dos.writeByte(2);
         }
-        super.salveaza2(dos);
+        super.save2(dos);
         dos.writeShort(puncte.size());
         for (Point p : puncte) {
             dos.writeShort(p.x);
@@ -129,7 +129,7 @@ public class Line extends Figure {
         }
     }
 
-    public void incheie() {
+    public void close() {
         int xM = 0, xm = Integer.MAX_VALUE;
         int yM = 0, ym = Integer.MAX_VALUE;
         for (Point p : puncte) {
@@ -159,17 +159,17 @@ public class Line extends Figure {
         dym = ym - y;
         dxM = xM - x;
         dyM = yM - y;
-        calculeazaLimite();
+        computeLimits();
     }
 
     @Override
-    public boolean adauga(int xm, int ym) {
+    public boolean add(int xm, int ym) {
         puncte.add(new Point(xm, ym));
         return true;
     }
 
     @Override
-    void deseneaza() {
+    void draw() {
         int xv, yv;
         Point pv = puncte.get(0);
         xv = pv.x + x;
@@ -183,7 +183,7 @@ public class Line extends Figure {
     }
 
     @Override
-    void redimensioneaza(int xm, int ym) {
+    void resize(int xm, int ym) {
     }
 
     @Override

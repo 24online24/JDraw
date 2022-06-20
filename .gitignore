@@ -27,3 +27,4 @@ hs_err_pid*
 
 #Saved files
 *.txt
+/org.online24_JDraw/target/

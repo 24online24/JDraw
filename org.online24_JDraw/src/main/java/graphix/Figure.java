@@ -46,14 +46,14 @@ abstract class Figure {
         y = dis.readShort();
     }
 
-    public void salveaza(PrintStream ps) {
+    public void save(PrintStream ps) {
         ps.println(c.getRGB());
         ps.println(filled);
         ps.println(x);
         ps.println(y);
     }
 
-    public void salveaza2(PrintStream ps) {
+    public void save2(PrintStream ps) {
         ps.print(c.getRGB() + ", ");
         int intFilled = filled ? 1 : 0;
         ps.print(intFilled + ", ");
@@ -61,7 +61,7 @@ abstract class Figure {
         ps.print(y + ", ");
     }
 
-    public void salveaza2(DataOutputStream dos) throws IOException {
+    public void save2(DataOutputStream dos) throws IOException {
         dos.writeInt(c.getRGB());
         short shortFilled = (short) (filled ? 1 : 0);
         dos.writeShort(shortFilled);
@@ -69,40 +69,40 @@ abstract class Figure {
         dos.writeShort(y);
     }
 
-    abstract void deseneaza();
+    abstract void draw();
 
-    abstract void redimensioneaza(int xm, int ym);
+    abstract void resize(int xm, int ym);
 
-    void afiseaza() {
+    void show() {
         g.setColor(c);
-        deseneaza();
+        draw();
     }
 
-    void sterge() {
+    void delete() {
         g.setColor(Color.WHITE);
-        deseneaza();
+        draw();
     }
 
-    void muta(int xm, int ym) {
-        sterge();
+    void move(int xm, int ym) {
+        delete();
         x = xm;
         y = ym;
-        afiseaza();
+        show();
     }
 
-    public void afiseazaMarcaj() {
+    public void showMarking() {
         g.setColor(Color.BLUE);
-        deseneazaMarcaj();
+        drawMarking();
     }
 
-    public void stergeMarcaj() {
+    public void deleteMarking() {
         g.setColor(Color.WHITE);
-        deseneazaMarcaj();
+        drawMarking();
     }
 
     abstract int[] getCoords();
 
-    public void deseneazaMarcaj() {
+    public void drawMarking() {
         int coords[], xm, xM, ym, yM;
         coords = getCoords();
         xm = coords[0];
@@ -118,15 +118,15 @@ abstract class Figure {
         g.drawRect(xM, yM, marcDist*2, marcDist*2);
     }
 
-    public boolean aproape(int xm, int ym) {
+    public boolean close(int xm, int ym) {
         return Math.abs(x - xm) < EPS && Math.abs(y - ym) < EPS;
     }
 
-    public boolean adauga(int xm, int ym) {
+    public boolean add(int xm, int ym) {
         return true;
     }
 
-    public void incheie() {
+    public void close() {
     }
     
 //    public void moveRandomly(){

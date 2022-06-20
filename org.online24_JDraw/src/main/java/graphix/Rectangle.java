@@ -37,29 +37,29 @@ public class Rectangle extends Figure {
         h = dis.readShort();
     }
 
-    public void salveaza(PrintStream ps) {
+    public void save(PrintStream ps) {
         ps.println(1);
-        super.salveaza(ps);
+        super.save(ps);
         ps.println(w);
         ps.println(h);
     }
 
-    public void salveaza2(PrintStream ps) {
+    public void save2(PrintStream ps) {
         ps.print("1, ");
-        super.salveaza2(ps);
+        super.save2(ps);
         ps.print(w + ", ");
         ps.println(h);
     }
 
-    public void salveaza2(DataOutputStream dos) throws IOException {
+    public void save2(DataOutputStream dos) throws IOException {
         dos.writeByte(1);
-        super.salveaza2(dos);
+        super.save2(dos);
         dos.writeShort(w);
         dos.writeShort(h);
     }
 
     @Override
-    void deseneaza() {
+    void draw() {
         if (filled) {
             g.fillRect(x - (int) (w / 2), y - (int) (h / 2), w, h);
         }
@@ -67,11 +67,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    void redimensioneaza(int xm, int ym) {
-        sterge();
+    void resize(int xm, int ym) {
+        delete();
         w = abs(xm - x) * 2;
         h = abs(ym - y) * 2;
-        afiseaza();
+        show();
     }
     
     @Override

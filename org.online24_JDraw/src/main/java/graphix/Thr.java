@@ -22,7 +22,7 @@ public class Thr extends Thread {
         int j = new Random().nextInt(-1, 2);
         while (true) {
             synchronized (o) {
-                f.muta(f.x + 1 * i, f.y + 1 * j);
+                f.move(f.x + 1 * i, f.y + 1 * j);
                 model.fireTableDataChanged();
                 coords = f.getCoords();
                 xm = coords[0];
