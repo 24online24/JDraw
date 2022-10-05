@@ -230,7 +230,7 @@ public class Interface extends javax.swing.JFrame {
         );
 
         buttonGroup2.add(jToggleButtonC);
-        jToggleButtonC.setText("Cerc");
+        jToggleButtonC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graphix/Icons/c.png"))); // NOI18N
         jToggleButtonC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButtonCActionPerformed(evt);
