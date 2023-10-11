@@ -171,7 +171,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("MOVE!!!");
+        jButton1.setText("Move");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -550,6 +550,10 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1KeyPressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (figuraSelectata!=null) {
+            figuraSelectata.deleteMarking();
+            figuraSelectata = null;
+        }
         for (Figure f : figuri) {
             Thr thread = new Thr(f);
             thread.start();
