@@ -18,8 +18,8 @@ public class Interface extends javax.swing.JFrame {
 
     static Graphics g;
     Color clr = Color.BLACK;
-    static ArrayList<Figure> figuri = new ArrayList();
-    ArrayList<Thr> threads = new ArrayList();
+    static ArrayList<Figure> figuri = new ArrayList<Figure>();
+    ArrayList<Thr> threads = new ArrayList<Thr>();
     Figure figura = null;
     Figure figuraSelectata = null;
     static Model model;
@@ -648,7 +648,7 @@ public class Interface extends javax.swing.JFrame {
             int cod;
             Figure f = null;
             while (dis.available() > 0) {
-                ArrayList<Integer> lineArray = new ArrayList();
+                ArrayList<Integer> lineArray = new ArrayList<Integer>();
                 String[] lineString;
                 lineString = dis.readLine().split(", ");
                 for (String s : lineString) {

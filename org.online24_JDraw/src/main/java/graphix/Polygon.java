@@ -2,16 +2,14 @@ package graphix;
 
 import java.awt.Color;
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class Polygon extends Line {
 
     Polygon(int xm, int ym, Color c, boolean filled) {
         super(0, 0, c, filled);
-        puncte = new ArrayList();
+        puncte = new ArrayList<Point>();
         puncte.add(new Point(xm, ym));
     }
 

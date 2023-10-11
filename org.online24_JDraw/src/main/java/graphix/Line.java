@@ -40,7 +40,7 @@ public class Line extends Figure {
 
     Line(int xm, int ym, Color c, boolean filled) {
         super(0, 0, c, filled);
-        puncte = new ArrayList();
+        puncte = new ArrayList<Point>();
         puncte.add(new Point(xm, ym));
     }
 
@@ -55,7 +55,7 @@ public class Line extends Figure {
         super(dis);
         int n
                 = Integer.parseInt(dis.readLine());
-        puncte = new ArrayList();
+        puncte = new ArrayList<Point>();
         for (int i
                 = 0; i < n; i++) {
             puncte.add(new Point(Integer.parseInt(dis.readLine()),
@@ -67,7 +67,7 @@ public class Line extends Figure {
     Line(ArrayList<Integer> numere) throws IOException {
         super(numere);
         int n = numere.remove(0);
-        puncte = new ArrayList();
+        puncte = new ArrayList<Point>();
         for (int i = 0; i < n;
                 i++) {
             puncte.add(new Point(numere.remove(0), numere.remove(0)));
@@ -78,7 +78,7 @@ public class Line extends Figure {
     Line(DataInputStream dis, boolean citeste) throws IOException {
         super(dis, false);
         int n = dis.readShort();
-        puncte = new ArrayList();
+        puncte = new ArrayList<Point>();
         for (int i = 0; i < n; i++) {
             puncte.add(new Point(dis.readShort(),
                     dis.readShort()));
