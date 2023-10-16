@@ -372,7 +372,9 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
-
+        System.out.println(wjPanel1 + "x" + hjPanel1);
+        System.out.println(jPanel1.getWidth() + "x" + jPanel1.getHeight());
+        System.out.println();
         int xv = evt.getX();
         int yv = evt.getY();
         if (figuraSelectata != null) {
