@@ -105,6 +105,11 @@ public class Interface extends javax.swing.JFrame {
                 jPanel1MouseReleased(evt);
             }
         });
+        jPanel1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentResized(java.awt.event.ComponentEvent evt) {
+                jPanel1ComponentResized(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -370,6 +375,13 @@ public class Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel1ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel1ComponentResized
+        g = jPanel1.getGraphics();
+        wjPanel1 = jPanel1.getWidth();
+        hjPanel1 = jPanel1.getHeight();
+        redeseneaza();
+    }//GEN-LAST:event_jPanel1ComponentResized
 
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
         System.out.println(wjPanel1 + "x" + hjPanel1);
@@ -656,7 +668,7 @@ public class Interface extends javax.swing.JFrame {
             while (dis.available() > 0) {
                 ArrayList<Integer> lineArray = new ArrayList<Integer>();
                 String[] lineString;
-                lineString = dis.readLine().split(", ");
+                lineString = dis.readLine().split(",");
                 for (String s : lineString) {
                     lineArray.add(Integer.parseInt(s));
                 }
